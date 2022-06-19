@@ -33,7 +33,6 @@ int main( int argc, string argv[])
             // CONDIÇÕES DE CRIPTOGRAFAMENTO DO INPUT ESPECÍFICO 
         for( int t = 0, l= strlen(plaintext); t < l; t++) // visitamento de cada carct digitado no input 
         {
-            // fazer a formula matematica na aba das letras maiúsculas 
             if(isupper(plaintext[t])) 
             {
                 printf("%c",(plaintext[t] - 65 + k) % 26 + 65);  // fórmula matemática que vai fazer o navegamento no alfabeto do código ASCII (MAIÚSCULAS)
@@ -44,7 +43,7 @@ int main( int argc, string argv[])
             }
             else
             {
-                printf("%c", plaintext[t]);
+                printf("%c", plaintext[t]); // Se não for letras, não vai haver nenhuma modificação.
             }
         }
         printf("\n");
